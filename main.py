@@ -69,7 +69,7 @@ def frame_count(cap, out):
 
 
 # Получаем путь к файлу и создаем объект захвата видео
-print("Введите путь видео файлу:")
+print("Введите путь к видеофайлу:")
 path = input()
 cap = cv2.VideoCapture(path)
 
@@ -91,8 +91,8 @@ if command == "q":
     exit(0)
 
 # Получаем путь к новому файлу и создаем объект записи видео
-print("Введите путь нового видео файла:")
-new_path = input()
+print("Введите путь нового видео файла(без указания расширения):")
+new_path = input() + ".mp4"
 
 #Выполнение команды
 if command == "1":
@@ -113,4 +113,3 @@ print("Готово")
 # When everything done, release the video capture object
 cap.release()
 out.release()
-
